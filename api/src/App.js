@@ -2,6 +2,8 @@
 import './App.css';
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom" 
 import Header from './components/header/Header';
+import Home from './pages/home/home';
+import MoveList from './components/movieList/movieList';
 
 function App() {
   return (
@@ -9,9 +11,9 @@ function App() {
       <Router>
         <Header/>
         <Routes>
-          <Route index element = {<h1>hello world 2</h1>}> </Route>
+          <Route index element = {<Home/>}> </Route>
           <Route path="movie/:id" element={<h1>Movie detail Page</h1>}></Route>
-          <Route path="movies/:type" element={<h1>Movie list Page</h1>}></Route>
+          <Route path="movies/:type" element={<MoveList/>}></Route>
           <Route path="/*" element= {<h1>Error Page</h1>}></Route>
         
         </Routes>
